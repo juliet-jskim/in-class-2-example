@@ -34,7 +34,7 @@ export default function Counter() {
         <div className={styles.description}>
           <p>
             COUNTER PAGE&nbsp;
-            <code className={styles.code}> Welcome, {isUser}</code>
+            <code class="welcome"className={styles.code}> Welcome, {isUser}</code>
           </p>
           <div>
             <a
@@ -75,16 +75,20 @@ export default function Counter() {
           </div>
         </div>
 
-        <div className={styles.grid}>
+        <div class="counter-container"className={styles.grid}>
       
-            <h2 className={inter.className}>
+            <h2 class="counter-header"className={inter.className}>
               The number is:
             </h2>
-            <p className={inter.className}>
+            <p class="counter-number"className={inter.className}>
             {number}
             </p>
-            <button onClick={() => setNumber(number + 1)}>Increment</button>
-            <button onClick={() => setNumber(number - 1)}>Decrement</button>
+            
+            <div class="button-container">
+              <button class="increment" onClick={() => setNumber(number + 1)}>Increment</button>
+              <button class="decrement" onClick={() => setNumber(number - 1)}>Decrement</button>
+            </div>
+            
         </div>
       </main>
     </>
