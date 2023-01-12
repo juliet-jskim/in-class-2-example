@@ -93,6 +93,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    
 }
 
 a {
@@ -117,4 +118,17 @@ button{
 
 .__className_9c9965 {
   font-size: 100px;
+}
+
+.sign-in-header {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+
+}
+
+.main-content{
+  display: flex;
+    gap: 30px;
+    justify-content: center;
 }

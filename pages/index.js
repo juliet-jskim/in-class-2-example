@@ -40,35 +40,42 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
 
-      <label>First name:</label>
-      <input
-        type="text"
-        id="first"
-        name="first"
-        required
-        pattern="[A-Z]{1}[a-z]{2,10}"
-        title="The first letter should be capitalized"
-        onChange={(e=> setFormData({...formData, firstName: e.target.value}))}
+      <div class="main-content"> 
 
-      />
+        <div class="sign-in-header">
+          <h2>Sign into your account</h2>
+        </div> 
+
+        <main className={styles.main}>
+          <label>First name:</label>
+          <input
+            type="text"
+            id="first"
+            name="first"
+            required
+            pattern="[A-Z]{1}[a-z]{2,10}"
+            title="The first letter should be capitalized"
+            onChange={(e=> setFormData({...formData, firstName: e.target.value}))}
+
+          />
 
 
-      <label>Username:</label>
-      <input
-          type="text"
-          id="username"
-          name="username"
-          required
-          title="Type your username"
-          minLength="5"
-          maxLength="10"
-          onChange={(e=> setFormData({...formData, username: e.target.value}))}
-          value={formData.username}
-      />
-      <button type="submit" onClick={() => CheckLogin()}>Submit</button>
-      </main>
+          <label>Username:</label>
+          <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              title="Type your username"
+              minLength="5"
+              maxLength="10"
+              onChange={(e=> setFormData({...formData, username: e.target.value}))}
+              value={formData.username}
+          />
+          <button type="submit" onClick={() => CheckLogin()}>Submit</button>
+        </main>
+      </div>
     </>
   )
 }
